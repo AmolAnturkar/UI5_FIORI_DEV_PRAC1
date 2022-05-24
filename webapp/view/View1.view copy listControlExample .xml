@@ -1,0 +1,57 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tss.mm.ord.controller.View1">
+   
+    <Page title="View1">
+        
+        <content>
+            <!-- <Button text="Go To Next" press="onNext"></Button> -->
+            <SearchField id=""></SearchField>
+
+            <List id="idList"> 
+                <items>
+                    <!-- DisplayListItem: Is used to create item for simple display purpose in the horizontal form -->
+                    <DisplayListItem label="Apple" value="The best for Antibiotic fruit in the world"> </DisplayListItem>
+
+                    <!-- StandardListItem: Is used to display data top down with an icon -->
+                    <StandardListItem title="Banana" description="One of the best source of potasium" icon="https://upload.wikimedia.org/wikipedia/commons/9/9b/Cavendish_Banana_DS.jpg"> </StandardListItem>
+
+                    <!-- InputListItem: Is used to input data inside the list -->
+                    <InputListItem> 
+                        <content> 
+                            <Label text="Which is the best fruit for skin?" class="sapUIMediumMarginEnd sapUITinyMarginTop"/>
+                            <Input width="40%"/>
+                        </content>
+                    </InputListItem>
+
+                    <!-- CustomListItme: Is used when none of the list item serve the purpose. It is rarely use -->
+                    <CustomListItem> 
+                        <SegmentedButton> 
+                            <buttons>
+                                <Button text="Low"/>
+                                <Button text="Medium"/>
+                                <Button text="High"/>
+                            </buttons>
+                        </SegmentedButton>
+                    </CustomListItem>
+
+                    <!-- ObjectListItem: Is used to display business object in the System. Most widely used -->
+                    <ObjectListItem title="Blackberry" intro="Good Antioxident" number="650 INR" numberUnit="/100 KG" icon="https://post.healthline.com/wp-content/uploads/2020/03/black-raspberries-732x549-thumbnail.jpg"> </ObjectListItem>
+
+                    <!-- FeedListItem: Is used to develop social media app - social signals -->
+                    <FeedListItem sender="Rupesh" text="Hey Amol" timestamp="Feb 18th 2022" icon="https://upload.wikimedia.org/wikipedia/commons/6/68/Joe_Biden_presidential_portrait.jpg"> </FeedListItem>
+
+                    <!-- ActionListItem: Is used to show action which is clickable  -->
+                    <ActionListItem text="Order Now!" press="onNext"> </ActionListItem>
+
+                </items>
+            </List>
+
+
+        </content>
+
+         <headerContent> 
+            <Button icon="sap-icon://action" press="onNext"/> 
+         </headerContent>
+       
+    </Page>
+
+</mvc:View>

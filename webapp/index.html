@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SAPUI5 First App</title>
+        <script
+            id="sap-ui-bootstrap"
+            src="https://sapui5.hana.ondemand.com/1.90.0/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_fiori_3_dark"
+            data-sap-ui-bindingSyntax="complex" 
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-language="en" 
+            data-sap-ui-resourceroots='{
+                "tss.mm.ord": "./"
+            }'>
+    
+        </script>
+
+        <script>
+            var oCompContainer = new sap.ui.core.ComponentContainer({
+                name: "tss.mm.ord"
+            });
+
+            oCompContainer.placeAt("content");
+
+
+        </script>
+
+
+    </head>
+
+    <body class="sapUiBody">
+        <div id="content"></div>
+    </body>
+</html>

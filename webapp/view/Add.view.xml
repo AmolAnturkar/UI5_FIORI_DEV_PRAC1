@@ -1,0 +1,73 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+            xmlns="sap.m" 
+            xmlns:f="sap.ui.layout.form"
+            xmlns:l="sap.ui.layout"
+            xmlns:core="sap.ui.core" 
+            controllerName="tss.mm.ord.controller.Add">
+   
+    <Page title="Manage Product" showNavButton="true" navButtonPress="onBack">
+        <content>
+          	<VBox class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormChange354"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Product"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false" >
+                    <f:content>
+                        <Label text="Product ID" />
+                        <Input id="id" value="{local>/productData/PRODUCT_ID}" submit="onSubmit" />
+                        <Button icon="sap-icon://money-bills" tooltip="Get most expensive product" press="onLoadExp"/>
+                        <Label text="Name/Description" />
+                        <Input value="{local>/productData/NAME}"/>
+                        <Input value="{local>/productData/DESCRIPTION}"/>
+                      
+                        <Label text="Supplier ID" />
+                        <Input value="{local>/productData/SUPPLIER_ID}" showValueHelp="true" valueHelpRequest="onF4Supplier"/>
+                       <Text text="{local>/SUPPLIER_NAME}" />
+                        <Label text="Price/Currency" />
+                        <Input value="{local>/productData/PRICE}">
+                            <layoutData>
+                                <l:GridData span="XL1 L2 M2 S4" />
+                            </layoutData>
+                        </Input>
+                        <Input value="{local>/productData/CURRENCY_CODE}" />
+                        <Label text="Category" />
+                        <Select id="category" selectedKey="{local>/productData/CATEGORY}">
+                            <items>
+                                <core:Item text="Notebooks" key="Notebooks"/>
+                                <core:Item text="Mice" key="Mice"/>
+                                <core:Item text="Projectors" key="Projectors"/>
+                            </items>
+                        </Select>
+                    </f:content>
+                </f:SimpleForm>
+	        </VBox>
+        </content>
+
+        <footer> 
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="Save" id="idSave" type="Accept" press="onSave"/>
+                <Button text="Delete" id="idDelete" type="Reject" enabled="false" press="onDelete"/>
+                <Button text="Clear" type="Emphasized" press="onClear"/>
+            </Toolbar>
+
+        </footer>
+
+      
+
+    </Page>
+
+</mvc:View>

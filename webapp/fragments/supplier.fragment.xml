@@ -1,0 +1,51 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+
+     <Table id="idTab" items="{/SupplierSet}" itemPress="onNavNextRow">  
+        <headerToolbar>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button icon="sap-icon://filter" press="onFilter"/>
+            </Toolbar>
+        </headerToolbar>
+
+                            <columns>
+                                <Column>
+                                    <header>
+                                        <Label text="Supplier ID" />
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="City" />   
+                                    </header>
+                                </Column>
+                                <Column minScreenWidth="Tablet" demandPopin="true">
+                                    <header>
+                                        <Label text="Company Name" />
+                                    </header>
+                                </Column>
+                                 <Column minScreenWidth="Tablet" demandPopin="true">
+                                    <header>
+                                        <Label text="Email Address" />
+                                    </header>
+                                </Column>
+
+                            </columns>
+
+                            <items>
+                                <ColumnListItem type="Navigation"> 
+                                    <cells>
+                                        <Text text="{BP_ID}"/> 
+                                        <Input value="{CITY}" showValueHelp="true" valueHelpRequest="onF4Help"/>
+                                        <Text text="{COMPANY_NAME}"/>   
+                                        <Text text="{EMAIL_ADDRESS}"/>
+                                        
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+
+                        </Table>
+   
+          
+
+</core:FragmentDefinition>

@@ -1,0 +1,123 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+            xmlns="sap.m" 
+            xmlns:f="sap.ui.layout.form"
+            xmlns:core="sap.ui.core" 
+            controllerName="tss.mm.ord.controller.View2">
+   
+    <Page title="View2" showNavButton="true" navButtonPress="onBack">
+        <content>
+            <!-- <Button text="Back" press="onBack"/> -->
+            <ObjectHeader title="{PRODUCT_ID}" intro="{DESCRIPTION}" number="{PRICE}" numberUnit="{CURRENCY_CODE}" icon="{sap-icon://product}"> </ObjectHeader>
+
+            <IconTabBar>
+                <items>
+                    <IconTabFilter icon="sap-icon://information" text="More Info">
+                         <!-- Moved control code to Fragment -->
+                        <!-- <f:SimpleForm>
+                            <f:content>
+                                <Label text="Name"> </Label>
+                                <Text text="{name}"> </Text>
+                                <Label text="Color"> </Label>
+                                <Text text="{color}"> </Text>
+                                <Label text="Health Benifit"> </Label>
+                                <Text text="{healthBenefit}"> </Text>
+                                <Label text="Price"> </Label>
+                                <Text text="{price}"> </Text>
+                            </f:content>
+                        </f:SimpleForm> -->
+
+                        <!-- Host for Fragment -->
+                        <core:Fragment fragmentName="tss.mm.ord.fragments.moreinfo" type="XML"> </core:Fragment>
+
+
+                    </IconTabFilter>
+
+                     <IconTabFilter icon="sap-icon://supplier" text="Suppliers">
+
+                      <!-- Moved control code to Fragment -->
+                        <!-- <Table id="idTab" items="{/suppliers}" itemPress="onNavNextRow">  
+                            <columns>
+                                <Column>
+                                    <header>
+                                        <Label text="Supplier Name" />
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="City" />   
+                                    </header>
+                                </Column>
+                                <Column minScreenWidth="Tablet" demandPopin="true">
+                                    <header>
+                                        <Label text="Contact Person" />
+                                    </header>
+                                </Column>
+                                 <Column minScreenWidth="Tablet" demandPopin="true">
+                                    <header>
+                                        <Label text="Since When" />
+                                    </header>
+                                </Column>
+
+                            </columns>
+
+                            <items>
+                                <ColumnListItem type="Navigation"> 
+                                    <cells>
+                                        <Text text="{name}"/> 
+                                        <Input value="{city}"/>
+                                        <Text text="{contactNo}"/> 
+                                        <Text text="{sinceWhen}"/>
+                                        
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+
+                        </Table> -->
+
+                         <core:Fragment fragmentName="tss.mm.ord.fragments.supplier" type="XML"> </core:Fragment>
+                      
+
+                    </IconTabFilter>
+
+                     <IconTabFilter icon="sap-icon://home" text="Cities">
+
+                     <!-- Moved control code to Fragment -->
+                        <!-- <Select items="{/cities}">
+                            <core:Item key="{name}" text="{name}"/>
+                        </Select>
+                        <ComboBox items="{/cities}">
+                            <core:Item key="{name}" text="{name}"/>
+                        </ComboBox>
+                        <MultiComboBox items="{/cities}" id="mcb">
+                            <core:Item key="{name}" text="{name}"/>
+                        </MultiComboBox>
+
+                        <Button text="Display Selected" press="onDisplSelect"/> -->
+
+                         <core:Fragment fragmentName="tss.mm.ord.fragments.cities" type="XML"> </core:Fragment>
+
+                    </IconTabFilter>
+
+                    
+
+                </items>
+
+                
+            </IconTabBar>
+
+        </content>
+
+        <footer>
+                <Toolbar>
+                    <ToolbarSpacer/> 
+                    <Button text="Save" type="Accept" press="onSave"/>
+                    <Button text="Cancel" type="Reject" press="onCancel"/>
+                </Toolbar>
+        </footer>
+
+
+       
+
+    </Page>
+
+</mvc:View>

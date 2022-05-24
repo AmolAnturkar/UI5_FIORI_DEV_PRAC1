@@ -1,0 +1,7 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tss.mm.ord.controller.App">
+   <!-- Adding container control inside Root view  - App.view.xml -->
+   <!-- Remember Rootview is different from App container controller -->
+    <SplitApp id="appCon">
+       
+    </SplitApp>
+</mvc:View>
